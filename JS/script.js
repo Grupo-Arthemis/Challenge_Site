@@ -3,6 +3,7 @@ const Botao_2 =document.querySelector("#Botao_2")
 const Botao_3 =document.querySelector("#Botao_3")
 const Botao_4 =document.querySelector("#Botao_4")
 const Botao_5 =document.querySelector("#Botao_5")
+const Botao_6 =document.querySelector("#Botao_6")
 
 
 
@@ -35,11 +36,16 @@ Botao_5.addEventListener("click", () => {
     const element = document.getElementById("Area_5");
     element.scrollIntoView({behavior: "smooth", block: "center"});
 })
+
+Botao_6.addEventListener("click", () => {
+    const element = document.getElementById("Area_6");
+    element.scrollIntoView({behavior: "smooth", block: "center"});
+})
 // --------------------------------------------------------------------------
 
 function destacarBotao(botao) {
     // botao.style.backgroundColor = "yellow";
-    botao.style.color = "#121e2e";
+    botao.style.color = "#287de4";
     botao.style.textDecoration = "underline";
 }
 

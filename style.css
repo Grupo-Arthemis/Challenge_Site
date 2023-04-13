@@ -1,18 +1,24 @@
 *{
     margin: 0;
     padding: 0;
-    --Branco : #F8F8F8;
-    --Azul : #476C9B;
+    --Azul_Escuro : #292d4b;
+    --Azul_claro : #abc6e897;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
 }
 
 
 .Cabecalho{
-    background-color: var(--Azul);
-    color: var(--Branco);
+    background-color: var(--Azul_claro);
+    color: var(--Azul_Escuro);
     padding: 5vh;
     justify-content: space-between;
     display: flex;
     align-items: center;
+    margin: 1% 1% 0% 1%;
 }
 
 .Titulo{
@@ -23,12 +29,31 @@
 .Menu{
     list-style:none;
     display: flex;
-    gap: 50px;
+    gap: 30px;
 }
+
+
 
 .Menu_Item{
     display: inline-block;
+    color: var(--Azul_Escuro);
     font-size: 1rem;
+    padding: 4px;
+    border-width: 2px;
+    border-style: solid;
+    border-color:var(--Azul_Escuro);
+    cursor: pointer;
+    transition: 200ms;
+}
+
+:hover.Menu_Item{
+    padding: 6px;
+    transition: 200ms;
+}
+
+.Banner{
+    background-color: var(--Azul_claro);
+    margin: 0% 1% 1% 1%;
 }
 
 .Container{
@@ -49,6 +74,10 @@
     flex-direction: column;
     align-items : center;
     justify-content : center;
+}
+
+.Section_6{
+    background-color: var(--Azul_claro);
 }
 
 .Item_Texto_2{
@@ -78,6 +107,15 @@
     margin: 2% 6%;
 }
 
+.Secao_3{
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10%;
+    margin: 2% 4%;
+    
+
+}
+
 .Item_Texto{
     font-size: 1.3rem;
     display : flex;
@@ -95,6 +133,18 @@
     justify-content: center;
 }
 
+.Item_Texto_4{
+    align-items : top;
+    font-size: 1.3rem;
+    padding: 70px 20px;
+    border-radius: 30px;
+    background: #ebe9e9;    
+    box-shadow:  20px 20px 60px #00000058,
+             -20px -20px 60px #e3e3e3;
+}
+
+
+
 .Area_imagem{
     display : flex;
     flex-direction: column;
@@ -107,4 +157,53 @@
     background: #e0e0e0;
     box-shadow:  20px 20px 60px #bebebe,
              -20px -20px 60px #ffffff;
+    transition: 700ms;
+}
+
+:hover.Item_Imagem{
+    border-radius: 40px;
+    padding: 3%;
+    transition: 700ms;
+}
+
+.Secao_6{
+    height: 17rem;
+    background-color: var(--Azul_claro);
+    padding: 0% 3% 5% 3%;
+    color: #292d4b;
+}
+
+.banner__pesquisa{  
+    background-color: transparent;
+    border: 3px solid var(--Azul_Escuro);
+    border-radius: 24px;
+    color: var(--Azul_Escuro);
+    padding: 1em;
+    width: 700px;
+}
+
+
+.Rodape{
+    color: #e0e0e0;
+    background-color: #292d4b;
+    padding: 1% 0 3% 0;
+    text-align: center;
+}
+
+.Menu_Roda{
+    list-style:none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+
+
+
+.Roda_item{
+    margin-top: 20%;
+    color: #e0e0e0;
+    text-decoration: none;
+    text-align: center;
+    font-weight:100;
 }
