@@ -167,7 +167,7 @@ body{
 }
 
 .Secao_6{
-    height: 17rem;
+    height: 30rem;
     background-color: var(--Azul_claro);
     padding: 0% 3% 5% 3%;
     color: #292d4b;
@@ -179,7 +179,7 @@ body{
     border-radius: 24px;
     color: var(--Azul_Escuro);
     padding: 1em;
-    width: 700px;
+    width: 80%;
 }
 
 
@@ -201,9 +201,38 @@ body{
 
 
 .Roda_item{
-    margin-top: 20%;
     color: #e0e0e0;
     text-decoration: none;
     text-align: center;
     font-weight:100;
+}
+
+
+.Formularios{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 35% 60%;
+    gap: 5%;
+}
+
+.Inscreva{
+    display: grid;
+    gap: 15px;
+}
+
+.Botaozin{
+    background-color: transparent;
+    border: 3px solid var(--Azul_Escuro);
+    border-radius: 24px;
+    color: var(--Azul_Escuro);
+    padding: 0.8em 1em;
+    width: 85%;
+    margin-left: 50px;
+}
+
+:hover.Botaozin{
+    color: #e0e0e0;
+    background-color: var(--Azul_Escuro);
+    padding: 15px;
+    transition: 400ms;
 }

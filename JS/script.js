@@ -54,3 +54,23 @@ function removerDestaqueBotao(botao) {
     botao.style.color = "";
     botao.style.textDecoration = "";
 }
+
+
+function validateForm() {
+    var name = document.forms[0]["name"].value;
+    if (name == "") {
+      alert("Por favor, preencha o campo Nome.");
+      return false;
+    }
+    var Email = document.forms[0]["Email"].value;
+    if ((Email == ""))  {
+      alert("Por favor, preencha o campo Email.");
+      return false;
+    }
+    if (Email.includes("@")){}
+    else{
+        alert("Insira um E-mail valido");
+        return false;
+    }
+    }
+  document.forms[0].addEventListener("submit", validateForm);
