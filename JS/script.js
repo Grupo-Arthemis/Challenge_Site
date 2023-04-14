@@ -42,15 +42,13 @@ Botao_6.addEventListener("click", () => {
     element.scrollIntoView({behavior: "smooth", block: "center"});
 })
 // --------------------------------------------------------------------------
-
+// funcao para destacar o botao
 function destacarBotao(botao) {
-    // botao.style.backgroundColor = "yellow";
     botao.style.color = "#287de4";
     botao.style.textDecoration = "underline";
 }
 
 function removerDestaqueBotao(botao) {
-    // botao.style.backgroundColor = "";
     botao.style.color = "";
     botao.style.textDecoration = "";
 }
