@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     --Azul_Escuro : #292d4b;
-    --Azul_claro : #abc6e897;
+    --Azul_claro : #abc6e8;
 }
 
 body{
@@ -15,7 +15,7 @@ body{
     background-color: var(--Azul_claro);
     color: var(--Azul_Escuro);
     padding: 5vh;
-    justify-content: space-between;
+    justify-content: center;
     display: flex;
     align-items: center;
     margin: 1% 1% 0% 1%;
@@ -29,7 +29,7 @@ body{
 .Menu{
     list-style:none;
     display: flex;
-    gap: 30px;
+    gap: 50px;
 }
 
 
@@ -38,7 +38,7 @@ body{
     display: inline-block;
     color: var(--Azul_Escuro);
     font-size: 1rem;
-    padding: 4px;
+    padding: 10px 20px;
     border-width: 2px;
     border-style: solid;
     border-color:var(--Azul_Escuro);
@@ -47,8 +47,9 @@ body{
 }
 
 :hover.Menu_Item{
-    padding: 6px;
+    padding: 10px 25px;
     transition: 200ms;
+    background-color: var(--Azul_Escuro);
 }
 
 .Banner{
@@ -182,6 +183,16 @@ body{
     width: 80%;
 }
 
+.banner__sugestao{
+    background-color: transparent;
+    border: 3px solid var(--Azul_Escuro);
+    border-radius: 24px;
+    color: var(--Azul_Escuro);
+    padding: 1em;
+    width: 80%;
+    height: 50%;
+}
+
 
 .Rodape{
     color: #e0e0e0;
@@ -231,7 +242,6 @@ body{
 }
 
 :hover.Botaozin{
-    color: #e0e0e0;
     background-color: var(--Azul_Escuro);
     padding: 15px;
     transition: 400ms;

@@ -44,7 +44,7 @@ Botao_6.addEventListener("click", () => {
 // --------------------------------------------------------------------------
 // funcao para destacar o botao
 function destacarBotao(botao) {
-    botao.style.color = "#287de4";
+    botao.style.color = "#ffffff";
     botao.style.textDecoration = "underline";
 }
 
@@ -56,19 +56,24 @@ function removerDestaqueBotao(botao) {
 
 function validateForm() {
     var name = document.forms[0]["name"].value;
-    var Email = document.forms[0]["Email"].value;
-    var Number = document.forms[0]["Number"].value;
     if (name == "") {
-      alert("Por favor, preencha o campo Nome.");
-      return false;
+        alert("Por favor, preencha o campo Nome.");
+        return false;
     }
+    var Email = document.forms[0]["Email"].value;
     if ((Email == ""))  {
-      alert("Por favor, preencha o campo Email.");
-      return false;
+        alert("Por favor, preencha o campo Email.");
+        return false;
     }
+    var Number = document.forms[0]["Number"].value;
     if ((Number == ""))  {
         alert("Por favor, preencha o campo Celular.");
         return false;
-      }
+    }
+    var sugestao = document.forms[0]["sugestao"].value;
+    if ((sugestao == ""))  {
+        alert("Não esqueça da sugestão");
+        return false;
+    }
 }
 document.forms[0].addEventListener("submit", validateForm);
