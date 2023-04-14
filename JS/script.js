@@ -56,6 +56,8 @@ function removerDestaqueBotao(botao) {
 
 function validateForm() {
     var name = document.forms[0]["name"].value;
+    var Email = document.forms[0]["Email"].value;
+    var Number = document.forms[0]["Number"].value;
     if (name == "") {
       alert("Por favor, preencha o campo Nome.");
       return false;
@@ -64,5 +66,9 @@ function validateForm() {
       alert("Por favor, preencha o campo Email.");
       return false;
     }
+    if ((Number == ""))  {
+        alert("Por favor, preencha o campo Celular.");
+        return false;
+      }
 }
-  document.forms[0].addEventListener("submit", validateForm);
+document.forms[0].addEventListener("submit", validateForm);
