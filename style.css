@@ -246,3 +246,119 @@ body{
     padding: 15px;
     transition: 400ms;
 }
+
+@media (max-width: 1200px ) {
+
+    .Cabecalho{
+        background-color: var(--Azul_claro);
+        color: var(--Azul_Escuro);
+        padding: 1vh;
+        justify-content: space-around;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .Menu_Item{
+        display: inline-block;
+        color: var(--Azul_Escuro);
+        font-size: 0.33rem;
+        padding: 5px 8px;
+        border-width: 1px;
+        border-style: solid;
+        border-color:var(--Azul_Escuro);
+        cursor: pointer;
+        transition: 200ms;
+    }
+
+    .Menu{
+        list-style:none;
+        display: flex;
+        gap: 5px;
+    }
+
+    .Banner{
+        display: none;
+    }
+    .Secao_6 img{
+        display: none;
+    }
+    .Formularios{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Formularios h1{
+        font-size: 1.5em;
+        margin-top: 2em;
+    }
+
+    .Menu_Roda{
+        list-style:none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .Menu_Roda li a{
+        font-size: 0.7rem;
+
+    }
+
+    .banner__pesquisa{  
+        background-color: transparent;
+        border: 2px solid var(--Azul_Escuro);
+        border-radius: 24px;
+        color: var(--Azul_Escuro);
+        padding: 0.3em;
+        width: 80%;
+    }
+
+    .Botaozin{
+        margin: 0%;
+    }
+
+    .Inscreva label{
+        display: none;
+    }
+
+    .Inscreva h1{
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
+
+    .Section_1 .Secao_1, .Secao_2, .Secao_3 {
+        margin: 5rem 0.3rem; 
+    }
+
+    .Section_1 p{
+        font-size: 0.5em;  
+    }
+
+    .Section_1 h1{
+        font-size: 1em;  
+    }
+
+    .Section_2 p{
+        font-size: 0.4em;
+    }
+
+    .Container > section{
+        height: 40vh;
+        display : flex;
+        flex-direction: column;
+        align-items : center;
+        justify-content : center;
+    }
+
+    .Item_Texto_4{
+
+        padding: 20px 20px;
+
+    }
+
+    
+
+    
+}
