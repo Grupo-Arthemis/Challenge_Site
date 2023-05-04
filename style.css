@@ -337,26 +337,26 @@ body{
     }
 
     .Section_1 .Secao_1, .Secao_2, .Secao_3 {
-        margin: 5rem 0.3rem; 
+        margin: 1rem 0.3rem; 
     }
 
     .Section_1 p{
-        font-size: 0.3em;  
+        font-size: 0.6em;  
     }
 
     .Section_1 h1{
-        font-size: 0.7rem;  
+        font-size: 1.2rem;  
     }
 
     .Section_2 p{
-        font-size: 0.3em;
+        font-size: 0.6em;
     }
 
     .Container > section{
-        height: 50vh;
+        height: 75vh;
         display : flex;
-        flex-direction: column;
-        align-items : center;
+        flex-direction: row;
+        align-items : start;
         justify-content : center;
     }
 
@@ -366,13 +366,58 @@ body{
 
     .Item_Texto_4 h2{
 
-        font-size: 0.7rem;
+        font-size: 0.8rem;
 
     }
 
     .Rodape h1{
         font-size: 0.7rem;
     }
+/* -------------------------- */
+    .Secao_1{
+        display: flex;
+        flex-direction: column;
+        margin: 2% 6%;
+    }
+
+    .Secao_1 img{
+        margin-top: 3rem;
+        width: 26vh;
+    }
+
+    .Secao_2{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 2% 6%;
+
+
+    }
+
+    .Secao_2 img{
+        width: 26vh;
+        margin-top: 3rem;
+    }
+
+    .Secao_3{
+        display: flex;
+        flex-direction: column;
+        margin: 2% 6%;
+        height: 18vh;
+        align-items: top;
+    }
+
+    .Secao_3 img{
+        width: 26vh;
+        margin-top: 3rem;
+    }
+
+    .Secao_3 .Item_Texto{
+        margin-top: 3rem;
+    }
+
+
+    
+
 
     
 
