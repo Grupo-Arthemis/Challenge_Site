@@ -349,7 +349,7 @@ body{
     }
 
     .Section_2 p{
-        font-size: 0.6em;
+        font-size: 0.5em;
     }
 
     .Container > section{
@@ -389,8 +389,6 @@ body{
         display: flex;
         flex-direction: column-reverse;
         margin: 2% 6%;
-
-
     }
 
     .Secao_2 img{
