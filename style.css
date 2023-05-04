@@ -257,7 +257,7 @@ body{
         display: flex;
         align-items: center;
         margin: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     .Menu_Item{
@@ -281,12 +281,18 @@ body{
     .Banner{
         display: none;
     }
+
+    .Secao_6{
+        height: auto;
+ 
+    }
     .Secao_6 img{
         display: none;
     }
     .Formularios{
         display: flex;
         flex-direction: column;
+
     }
 
     .Formularios h1{
@@ -347,8 +353,7 @@ body{
     }
 
     .Container > section{
-        height: 40vh;
-        margin: 10vh 0;
+        height: 50vh;
         display : flex;
         flex-direction: column;
         align-items : center;
@@ -363,6 +368,10 @@ body{
 
         font-size: 0.7rem;
 
+    }
+
+    .Rodape h1{
+        font-size: 0.7rem;
     }
 
     
