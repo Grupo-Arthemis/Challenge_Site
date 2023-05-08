@@ -85,18 +85,36 @@ function validarFormulario() {
     var numero = document.getElementById("number");
     var mensagem = document.getElementById("sugestao");
 
+    // Expressão regular para verificar o formato do e-mail
+    var emailRegExp = /\S+@\S+\.\S{2,}/;
+
     if (nome.value === "" || email.value === "" || numero.value === "" || mensagem.value === "") {
-        alert("Por favor, preencha todos os campos.");
+        alert("Por favor, preencha todos os campos. (nome, email, numero e sugestão)");
+        return false;
+    } else if (!emailRegExp.test(email.value)) {
+        alert("Por favor, informe um e-mail válido.");
         return false;
     } else {
-        alert("Obrigado por nos contatar!");
+        limparCampos();
         return true;
     }
+}
+
+function limparCampos() {
+    document.getElementById("name").value = '';
+    document.getElementById("Email").value = '';
+    document.getElementById("number").value = '';
+    document.getElementById("sugestao").value = '';
 }
 
 document.getElementById("Botaolegal").addEventListener("click", function(event) {
     event.preventDefault();
     if (validarFormulario()) {
-        document.getElementById("meuFormulario").confirm();
+        var confirmacao = confirm("Tem certeza de que deseja enviar o formulário?");
+        if (confirmacao) {
+            document.getElementById("meuFormulario").reset();
+            alert("Obrigado por nos contatar!");
+        }
+        return false;
     }
 });
