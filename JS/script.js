@@ -65,7 +65,7 @@ function removerDestaqueBotao(botao) {
 //         alert("Por favor, preencha o campo Email.");
 //         return false;
 //     }
-//     var Number = document.forms[0]["Number"].value;
+//     var Number = document.forms[0]["number"].value;
 //     if ((Number == ""))  {
 //         alert("Por favor, preencha o campo Celular.");
 //         return false;
@@ -86,18 +86,17 @@ function validarFormulario() {
     var mensagem = document.getElementById("sugestao");
 
     if (nome.value === "" || email.value === "" || numero.value === "" || mensagem.value === "") {
-        alert("Por favor, preencha todos os campos obrigatórios.");
+        alert("Por favor, preencha todos os campos.");
         return false;
-      } else {
+    } else {
         alert("Obrigado por nos contatar!");
         return true;
     }
-  }
+}
 
-  document.getElementById("Botaolegal").addEventListener("click", function(event) {
+document.getElementById("Botaolegal").addEventListener("click", function(event) {
     event.preventDefault();
-    document.getElementById("100").scrollIntoView();
     if (validarFormulario()) {
-        document.getElementById("meuFormulario").submit()
+        document.getElementById("meuFormulario").confirm();
     }
-  });
+});
