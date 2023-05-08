@@ -53,39 +53,13 @@ function removerDestaqueBotao(botao) {
     botao.style.textDecoration = "";
 }
 
-
-// function validateForm() {
-//     var name = document.forms[0]["name"].value;
-//     if (name == "") {
-//         alert("Por favor, preencha o campo Nome.");
-//         return false;
-//     }
-//     var Email = document.forms[0]["Email"].value;
-//     if ((Email == ""))  {
-//         alert("Por favor, preencha o campo Email.");
-//         return false;
-//     }
-//     var Number = document.forms[0]["number"].value;
-//     if ((Number == ""))  {
-//         alert("Por favor, preencha o campo Celular.");
-//         return false;
-//     }
-//     var sugestao = document.forms[0]["sugestao"].value;
-//     if ((sugestao == ""))  {
-//         alert("Não esqueça da sugestão");
-//         return false;
-//     }
-// }
-// document.forms[0].addEventListener("submit", validateForm);
-
-
+// validando se esta tudo preenchido
 function validarFormulario() {
     var nome = document.getElementById("name");
     var email = document.getElementById("Email");
     var numero = document.getElementById("number");
     var mensagem = document.getElementById("sugestao");
 
-    // Expressão regular para verificar o formato do e-mail
     var emailRegExp = /\S+@\S+\.\S{2,}/;
 
     if (nome.value === "" || email.value === "" || numero.value === "" || mensagem.value === "") {
@@ -100,6 +74,7 @@ function validarFormulario() {
     }
 }
 
+// limpar campos
 function limparCampos() {
     document.getElementById("name").value = '';
     document.getElementById("Email").value = '';
@@ -107,6 +82,7 @@ function limparCampos() {
     document.getElementById("sugestao").value = '';
 }
 
+// clique do botao
 document.getElementById("Botaolegal").addEventListener("click", function(event) {
     event.preventDefault();
     if (validarFormulario()) {
