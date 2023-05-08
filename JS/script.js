@@ -54,26 +54,50 @@ function removerDestaqueBotao(botao) {
 }
 
 
-function validateForm() {
-    var name = document.forms[0]["name"].value;
-    if (name == "") {
-        alert("Por favor, preencha o campo Nome.");
+// function validateForm() {
+//     var name = document.forms[0]["name"].value;
+//     if (name == "") {
+//         alert("Por favor, preencha o campo Nome.");
+//         return false;
+//     }
+//     var Email = document.forms[0]["Email"].value;
+//     if ((Email == ""))  {
+//         alert("Por favor, preencha o campo Email.");
+//         return false;
+//     }
+//     var Number = document.forms[0]["Number"].value;
+//     if ((Number == ""))  {
+//         alert("Por favor, preencha o campo Celular.");
+//         return false;
+//     }
+//     var sugestao = document.forms[0]["sugestao"].value;
+//     if ((sugestao == ""))  {
+//         alert("Não esqueça da sugestão");
+//         return false;
+//     }
+// }
+// document.forms[0].addEventListener("submit", validateForm);
+
+
+function validarFormulario() {
+    var nome = document.getElementById("name");
+    var email = document.getElementById("Email");
+    var numero = document.getElementById("number");
+    var mensagem = document.getElementById("sugestao");
+
+    if (nome.value === "" || email.value === "" || numero.value === "" || mensagem.value === "") {
+        alert("Por favor, preencha todos os campos obrigatórios.");
         return false;
+      } else {
+        alert("Obrigado por nos contatar!");
+        return true;
     }
-    var Email = document.forms[0]["Email"].value;
-    if ((Email == ""))  {
-        alert("Por favor, preencha o campo Email.");
-        return false;
+  }
+
+  document.getElementById("Botaolegal").addEventListener("click", function(event) {
+    event.preventDefault();
+    document.getElementById("100").scrollIntoView();
+    if (validarFormulario()) {
+        document.getElementById("meuFormulario").submit()
     }
-    var Number = document.forms[0]["Number"].value;
-    if ((Number == ""))  {
-        alert("Por favor, preencha o campo Celular.");
-        return false;
-    }
-    var sugestao = document.forms[0]["sugestao"].value;
-    if ((sugestao == ""))  {
-        alert("Não esqueça da sugestão");
-        return false;
-    }
-}
-document.forms[0].addEventListener("submit", validateForm);
+  });
