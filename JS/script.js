@@ -4,6 +4,7 @@ const Botao_3 =document.querySelector("#Botao_3")
 const Botao_4 =document.querySelector("#Botao_4")
 const Botao_5 =document.querySelector("#Botao_5")
 const Botao_6 =document.querySelector("#Botao_6")
+const Botao_7 =document.querySelector("#Botao_7")
 
 
 
@@ -41,6 +42,7 @@ Botao_6.addEventListener("click", () => {
     const element = document.getElementById("Area_6");
     element.scrollIntoView({behavior: "smooth", block: "center"});
 })
+
 // --------------------------------------------------------------------------
 // funcao para destacar o botao
 function destacarBotao(botao) {
@@ -52,7 +54,6 @@ function removerDestaqueBotao(botao) {
     botao.style.color = "";
     botao.style.textDecoration = "";
 }
-
 
 function validateForm() {
     var name = document.forms[0]["name"].value;
