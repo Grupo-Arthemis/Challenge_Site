@@ -18,11 +18,8 @@ botao.addEventListener("click", ()=>{
         const msgError = document.querySelector("#msgError");
 
         try{
-
             let listaUser = JSON.parse(localStorage.getItem("listaUser"));
-
             listaUser.forEach((usuario)=>{
-
                 if(usuarioValidado.usuarioInput == usuario.emailUsuario && usuarioValidado.senhaInput == usuario.senhaUsuario){
                     //Adicionando nova propriedade no objeto.
                     usuarioValidado["nomeCompleto"] = usuario.nomeCompleto;
@@ -44,13 +41,14 @@ botao.addEventListener("click", ()=>{
                 
                 msgError.setAttribute("style","color:#0c203f;background-color:#78dab9;display:block;")
                 msgError.innerHTML = "<strong>Usuário validado!</strong>"
+
+                setTimeout(function () {
+                    window.location.href = "../home.html";
+                }, 3000 );
             }else{
                 msgError.innerHTML = "<strong>Senha ou Usuário inválidos!</strong>";
                 msgError.setAttribute("style","color:#0c203f;display:block;");
             }
         }
-           
-
-
     }
 );

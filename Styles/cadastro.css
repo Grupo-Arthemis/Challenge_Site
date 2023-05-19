@@ -28,6 +28,16 @@ main{
   align-items: center;
 }
 
+#msgError{
+  width: 300px;
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbbd6;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
 .formulario{
   width: 450px;
   height: 650px;
