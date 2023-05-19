@@ -1,11 +1,12 @@
 *{
     margin: 0;
     padding: 0;
+    zoom: 0.95;
 }
 
 .cabeçalho{
     width: 100%;
-    height: 100px;
+    height: 115px;
     background-color: #0c203f;
     color: #fff;
     display: flex;
@@ -25,6 +26,16 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#msgError{
+  width: 300px;
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbbd6;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
 }
 
 .formulario{
@@ -167,4 +178,5 @@ main{
     -webkit-box-shadow: none;
     box-shadow: none;
   }
+  
   

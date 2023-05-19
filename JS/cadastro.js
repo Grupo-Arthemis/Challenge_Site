@@ -35,25 +35,65 @@ function validarFormulario() {
         alert("A senha e a confirmação devem ser iguais.");
         return false;
     } else {
-        limparCampos();
         return true;
     }
 }
 
+let listaDeUsuarios = [
+    {
+        emailUsuario : "jose",
+        senhaUsuario: "123456"
+    }
+    ,
+    {
+        emailUsuario : "paulo",
+        senhaUsuario: "123456"
+    }
+    ,
+    {
+        emailUsuario : "maria",
+        senhaUsuario: "123456"
+    }
+    ,
+    {
+        emailUsuario : "joao",
+        senhaUsuario: "123456"
+    }
+];
+
+//Adicionando a lista de OBJETOS no localStorage
+localStorage.setItem("listaUser", JSON.stringify(listaDeUsuarios));
+
 
 //clique do botao onde faz a verificação, pergunta se deseja salvar e limpa os campos
 document.getElementById("Botaolegal").addEventListener("click", function(event) {
+    
     event.preventDefault();
     if (validarFormulario()) {
         var confirmacao = confirm("Está certo das suas informações?");
         if (confirmacao) {
             document.getElementsByClassName("formulario_itens");
-            limparCampos();
+            console.log(email.value);
+            console.log(senha.value);
+
+            var newUserWrk = JSON.parse(localStorage.getItem("listaUser"));
+            newUser = {
+                emailUsuario : email.value,
+                senhaUsuario : senha.value
+            };
+            newUserWrk.push(newUser);
+            console.log(listaDeUsuarios);
+            console.log(newUserWrk);
+            localStorage.setItem("listaUser", JSON.stringify(newUserWrk));
+            
+            
             alert("Cadastrado!");
         }
         return false;
     }
 });
+
+
 
 //ficar verde se o minimo de caracteres ter sido atingido---------------------------
 var nome = document.getElementById("fname");
@@ -70,7 +110,7 @@ nome.addEventListener("focus", ()=>{
 nome.addEventListener("keyup", ()=>{
     if(nome.value.length < 5){
         nome.setAttribute("style","outline-color:#ff0000;")
-
+        
     }else{
         nome.setAttribute("style","outline-color:#00ff00;")
     }
@@ -139,41 +179,3 @@ confirma.addEventListener("keyup", ()=>{
 
 
 // fim da verificaçao com cor verde-----------------------------------------------
-
-
-console.log("toggle");
-const toggle = document.querySelector(".toggle-switch > label > input[type='checkbox']");
-toggle.addEventListener("click", ()=>{
-    console.log("clicou");
-})
-
-//Botão de dark mode
-console.log("teste")
-const tit = document.querySelector('.checkbox');
-const fundo = document.querySelector('body')
-const labels = document.querySelector('.formulario_itens')  
-const titulo = document.querySelector('.formulario h1')  
-const botao = document.querySelector('.Botaozin')
-const cabecalho = document.querySelector('.cabeçalho')
-
-
-
-console.log(fundo)
-fundob = true
-
-tit.addEventListener("click", ()=>{
-    if (fundob == true) {
-        fundo.style.backgroundImage = 'url(../Assets/Fundo-Chuva.png)';
-        labels.style.color = '#fff';
-        titulo.style.color = '#fff';
-        cabecalho.style.backgroundColor = '#0c203f';
-        fundob = false;
-    }else{
-        fundo.style.backgroundImage = 'url(../Assets/Fundo-1.jpg)';
-        labels.style.color = '#0c203f';
-        titulo.style.color = '#0c203f';
-        cabecalho.style.backgroundColor = '#0c203f';
-        fundob = true;
-    }
-})
-
