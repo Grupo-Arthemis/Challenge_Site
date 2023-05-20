@@ -6,6 +6,17 @@
 *Felipe Cortez dos Santos RM:99750* </br>
 *Victor Hugo Aranda Forte RM:99667* </br>
 
+**Usuarios pra teste:**
+
+| Email                      | Senha                      | Nome                    |
+|----------------------------|----------------------------|-------------------------|
+|jose@gmail.com              |123456                      |José                     |
+|paulo@gmail.com             |123456                      |Paulo                    |
+|maria@gmail.com             |123456                      |Maria                    |
+|joao@gmail.com              |123456                      |João                     |
+
+
+
 **Grupo03**
 
 **Turma: (ESPW)**
