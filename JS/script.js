@@ -7,8 +7,20 @@ const Botao_6 =document.querySelector("#Botao_6")
 const Botao_7 =document.querySelector("#Botao_7")
 
 
+var usuarioValidado = JSON.parse(localStorage.getItem("usuario-validado"));
+if(usuarioValidado != null){
+    Botao_7.style.display = "none"
+    document.querySelector(".Usuario_Logado").style.display = "inline-block"
+    document.getElementById("msgBemVindo").innerHTML = "Bem vindo, " + usuarioValidado.nomeCompleto + "!"
+};
 
-
+document.querySelector(".material-symbols-outlined").addEventListener("click", () => {
+    console.log("clicou")
+    usuarioValidado = null
+    console.log(usuarioValidado)
+    localStorage.setItem("usuario-validado", JSON.stringify(usuarioValidado));
+    window.location.reload(true);
+});
 
 
 

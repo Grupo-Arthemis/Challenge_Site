@@ -32,6 +32,23 @@ body{
     gap: 50px;
 }
 
+.Usuario_Logado{
+    display: none;
+    justify-content: center;
+    align-items: baseline;
+    color: var(--Azul_Escuro);
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-width: 2px;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.Usuario_Logado li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
 
 
 .Menu_Item{
